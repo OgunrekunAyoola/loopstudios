@@ -23,7 +23,6 @@ body{
 }
 .logo{
     padding-left: 10vw;
-    /* margin-top: 40px; */
 }
 .logo img{
     width: 25vh;
@@ -40,7 +39,6 @@ body{
     display: flex;
     padding-right: 10vw;
     text-decoration: none;
-    /* margin-top: 40px; */
     list-style: none;
 }
 .sr-only{

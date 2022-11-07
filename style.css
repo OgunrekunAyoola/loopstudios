@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+    max-width: 100vh;
+}
+.mobile-nav-toggle{
+    display: none;
+}
+.primary-header{
+    display: flex;
+    position: relative;
+    background-image: url(./loopstudios-landing-page-main/images/desktop/image-hero.jpg);
+    min-height: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    justify-content: space-between;
+    background-size: cover;
+    width: 100vw;
+    padding-top: 20px;
+}
+.logo{
+    padding-left: 10vw;
+    /* margin-top: 40px; */
+}
+.logo img{
+    width: 25vh;
+
+}
+.menu{
+   
+}
+.head-img img{
+  
+}
+.primary-navigation{
+    align-items: center;
+    display: flex;
+    padding-right: 10vw;
+    text-decoration: none;
+    /* margin-top: 40px; */
+    list-style: none;
+}
+.sr-only{
+    display: none;
+}
+
+a{
+    margin: 0 10px 0 10px;
+    color: white;
+    text-decoration: none;
+}
+@media (max-width: 35em) {
+    .primary-navigation{
+        --gap: 2em;
+        z-index: 1000;
+        flex-direction: column;
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: hsl(0 0% 100% /0.1);
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);
+        transition: 1s all;
+    }
+    .primary-navigation[data-visible = 'true'] {
+        transform: translateX(0%);
+    }
+    li{
+        margin-top: 10px;
+    }
+    .mobile-nav-toggle{
+        display: block;
+        position: absolute;
+        background: url(./loopstudios-landing-page-main/images/icon-hamburger.svg);
+        transition: 1.5s all;
+        color: white;
+        width: 2rem;
+        background-repeat: no-repeat;
+        top: 1rem;
+        border: 0;
+        right: 2rem;
+        z-index: 9999;
+        aspect-ratio: 1;
+    }
+    .mobile-nav-toggle[aria-expanded = "true"]{
+        background-image: url(./loopstudios-landing-page-main/images/icon-close.svg);
+        transition: 1.5s all;
+    }
+}

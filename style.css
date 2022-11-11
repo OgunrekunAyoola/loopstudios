@@ -2,12 +2,10 @@
     margin: 0;
     padding: 0;
 }
-
 .mobile-nav-toggle{
     display: none;
 }
 .primary-header{
-    position: relative;
     background-image: url(./loopstudios-landing-page-main/images/desktop/image-hero.jpg);
     min-height: 450px;
     background-repeat: no-repeat;
@@ -15,9 +13,6 @@
     background-size: cover;
     width: 100vw;
     padding-top: 20px;
-}
-.logo{
-
 }
 .logo img{
     width: 25vw;
@@ -28,7 +23,6 @@
    justify-content: space-between;
 }
 .primary-navigation{
-    align-items: center;
     display: flex;
     text-decoration: none;
     list-style: none;
@@ -36,7 +30,6 @@
 .sr-only{
     display: none;
 }
-
 a{
     margin: 0 10px 0 10px;
     color: white;
@@ -97,7 +90,7 @@ a{
     .mob-btn{
         margin-top: 30px;
         background: transparent;
-        border: 2px solid black;
+        border: 2px solid hsl(0, 0%, 41%);
         padding: 10px 45px;
     }
     .grid-section{
@@ -106,7 +99,6 @@ a{
     .grid-section h2{
         position: absolute;
         margin-top: 120px;
-        z-index: 1000;
         margin-left: 20px;
         text-transform: uppercase;
     }
@@ -117,7 +109,9 @@ a{
     background-repeat: no-repeat;
     }
     .grid:hover{
-        opacity: 0.3;
+        opacity: .5;
+    }
+    .grid:hover h2{
         color: black;
     }
     .deep-earth{
@@ -230,11 +224,12 @@ a{
     padding: 7px 30px;
     text-align: center;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid hsl(0, 0%, 41%);
 }
 .our-creation button:hover{
     background-color: black;
     color: white;
+    border: none;
     transition: 1s ease-in-out;
 }
 .mob-btn{
@@ -329,6 +324,10 @@ a{
 }
 }
 @media (max-width: 35em) {
+    .logo{
+        z-index: 9999;
+        position: absolute;
+    }
     .primary-navigation{
         --gap: 2em;
         z-index: 1000;
@@ -336,20 +335,17 @@ a{
         position: fixed;
         inset: 0 0 0 0%;
         background: black;
-        padding: min(30vh, 10rem) 2em;
-        transform: translateX(100%);
+        padding-top: 20vh;
+        text-transform: uppercase;
+        transform: translatey(-100%);
         transition: 1s all;
     }
     .primary-navigation[data-visible = 'true'] {
-        transform: translateX(0%);
-         height: 100%;
-        overflow-x: hidden;
+        transform: translatey(0%);
     }
-     /* .primary-navigation[data-visible = 'true'] body{
-        overflow: hidden;
-     } */
-    li{
-        margin-top: 10px;
+    .primary-navigation li{
+        margin-top: 7vh;
+        margin-left: 5vw;
     }
     .mobile-nav-toggle{
         display: block;
@@ -368,7 +364,7 @@ a{
     .mobile-nav-toggle[aria-expanded = "true"]{
         background-image: url(./loopstudios-landing-page-main/images/icon-close.svg);
         transition: 1s all;
-    }
+    } 
     .our-creation h1{
         margin: auto;
     }
